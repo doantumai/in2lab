@@ -2,7 +2,8 @@
 
 Informationssysteme II, Bachelor Wirtschaftsinformatik
 
-Stefan Sarstedt, stefan.sarstedt(at)haw-hamburg.de
+Stefan Sarstedt, stefan.sarstedt(at)haw-hamburg.de  
+Sven Berding, sven.berding(at)haw-hamburg.de
 
 ## A. Einrichtung des JDK und Ausführen der Tests
 
