@@ -17,10 +17,7 @@ plugins {
 }
 
 apply plugin: 'java'
-apply plugin: 'groovy'
-apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
-apply plugin: 'jacoco'
 
 group = "com.haw.srs"
 version = '0.0.1-SNAPSHOT'
