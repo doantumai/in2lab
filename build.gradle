@@ -21,7 +21,7 @@ apply plugin: 'org.springframework.boot'
 
 group = "com.haw.srs"
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 13
+sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
     jcenter()
@@ -35,8 +35,8 @@ configurations {
 dependencies {
 
     // compiletime dependencies
-    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
-    compile 'javax.xml.bind:jaxb-api'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'javax.xml.bind:jaxb-api'
     compileOnly 'org.projectlombok:lombok:1.18.12'
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
 
@@ -45,10 +45,10 @@ dependencies {
     runtime 'com.h2database:h2'
 
     // dependencies for test-execution
-    testCompile 'org.assertj:assertj-core:3.15.0'
-    testCompile 'org.springframework.boot:spring-boot-starter-test'
-    testCompile 'org.junit.jupiter:junit-jupiter-api:5.4.2'
-    testCompile 'org.junit.jupiter:junit-jupiter-params:5.4.2'
+    testImplementation 'org.assertj:assertj-core:3.15.0'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.4.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
 }
 

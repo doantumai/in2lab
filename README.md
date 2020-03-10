@@ -7,10 +7,10 @@ Sven Berding, sven.berding(at)haw-hamburg.de
 
 ## A. Einrichtung des JDK und Ausführen der Tests
 
-1. Installiere lokal auf Deinem Rechner (achte auf die korrekten Versionen!):
-    - Java OpenJDK 13 (JDK, nicht die JRE): https://openjdk.java.net. Unter Windows bedeutet dies u.a.: JAVA_HOME setzen und den Compiler in den PATH aufnehmen ([Anleitung hier](https://tecadmin.net/set-java-home-on-windows/)); bei Änderungen der Systemeinstellungen muss ein Terminal neu geöffnet werden, damit die Änderungen effektiv werden.
+1. Installiere lokal auf Deinem Rechner:
+    - Java OpenJDK (mindestens das JDK 8, und nicht die JRE!): https://openjdk.java.net. Unter Windows bedeutet dies u.a.: JAVA_HOME setzen und den Compiler in den PATH aufnehmen ([Anleitung hier](https://tecadmin.net/set-java-home-on-windows/)); bei Änderungen der Systemeinstellungen muss ein Terminal neu geöffnet werden, damit die Änderungen effektiv werden.
     
-2. Forke das Projekt https://gitlab.informatik.haw-hamburg.de/SoSe20IN2/in2lab (nutze den `Fork`-Button oben rechts, oder direkt per Link: https://gitlab.informatik.haw-hamburg.de/SoSe20IN2/in2lab/-/forks/new).
+2. Forke dieses Projekt (nutze den `Fork`-Button oben rechts).
 
 3. Trage uns (Sven Berding und mich) unter `Settings->Members` als Projektmitglieder mit der Berechtigung `Maintainer` ein.
 
@@ -25,7 +25,7 @@ Sven Berding, sven.berding(at)haw-hamburg.de
 
 7. Führe die Tests im Terminal aus mittels 
      ```bash
-     ./gradlew build (unter Linux/macOS, bei Bedarf zuvor "chmod +x ./gradlew" ausführen)
+     ./gradlew build (unter Linux/macOS, bei Bedarf dort zuvor "chmod +x ./gradlew" ausführen, um die Ausführungsberechtigung zu setzen)
      ```
      bzw. 
      ```bash
