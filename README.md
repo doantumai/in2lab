@@ -10,6 +10,7 @@ Sven Berding, sven.berding(at)haw-hamburg.de
 1. Installiere lokal auf Deinem Rechner:
     - Java OpenJDK (mindestens das JDK 8, und nicht die JRE!): https://openjdk.java.net. Unter Windows bedeutet dies u.a.: JAVA_HOME setzen und den Compiler in den PATH aufnehmen ([Anleitung hier](https://tecadmin.net/set-java-home-on-windows/)); bei Änderungen der Systemeinstellungen muss ein Terminal neu geöffnet werden, damit die Änderungen effektiv werden.
     
+    
 2. Forke dieses Projekt (nutze den `Fork`-Button oben rechts).
 
 3. Trage uns (Sven Berding und mich) unter `Settings->Members` als Projektmitglieder mit der Berechtigung `Maintainer` ein.
