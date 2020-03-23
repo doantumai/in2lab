@@ -36,7 +36,7 @@ class PopulateTestDataRunner implements CommandLineRunner {
                         name -> customerRepository.save(new Customer("Jane", name, Gender.FEMALE, name + "@dummy.org", null))
                 );
 
-        Customer customer = new Customer("Stefan", "Sarstedt", Gender.MALE, "stefan.sarstedt@haw-hamburg.de", null);
+        Customer customer = new Customer("Stefan", "Sarstedt", Gender.MALE, "stefan.sarstedt@haw-hamburg.de", new PhoneNumber("+49-40-123456"));
         Reservation reservation = new Reservation("James Bond 007");
         customer.addReservation(reservation);
         customerRepository.save(customer);
