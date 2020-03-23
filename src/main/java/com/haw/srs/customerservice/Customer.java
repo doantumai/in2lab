@@ -27,6 +27,7 @@ public class Customer {
     private PhoneNumber phoneNumber;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    //@JoinColumn(name="customerId") // generiert dann keine Jointabelle
     @Setter(AccessLevel.NONE)
     private List<Reservation> reservations = new ArrayList<>();
 
