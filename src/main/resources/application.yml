@@ -12,7 +12,7 @@ spring:
     database: MYSQL
     generate-ddl: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     properties:
       hibernate:
         show_sql: false
@@ -26,6 +26,9 @@ spring:
   profiles: testing
   jpa:
     database: H2
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
     properties:
       hibernate:
         show_sql: false

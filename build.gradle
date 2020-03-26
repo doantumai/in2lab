@@ -54,7 +54,9 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
+    useJUnitPlatform {
+        includeEngines 'junit-jupiter'
+    }
     failFast = true
     testLogging {
         events "passed", "skipped", "failed"
