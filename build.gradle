@@ -43,6 +43,7 @@ dependencies {
 
     // runtime dependencies
     runtime 'org.springframework.boot:spring-boot-devtools'
+    //runtimeOnly 'mysql:mysql-connector-java'
     runtime 'com.h2database:h2'
 
     // dependencies for test-execution
