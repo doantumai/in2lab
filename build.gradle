@@ -4,7 +4,7 @@ buildscript {
     }
     repositories {
         jcenter()
-        maven { url "http://repo.spring.io/release" }
+        maven { url "https://repo.spring.io/release" }
     }
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
@@ -25,7 +25,7 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
     jcenter()
-    maven { url "http://repo.spring.io/release" }
+    maven { url "https://repo.spring.io/release" }
 }
 
 configurations {
@@ -42,9 +42,9 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
 
     // runtime dependencies
-    runtime 'org.springframework.boot:spring-boot-devtools'
-    //runtimeOnly 'mysql:mysql-connector-java'
-    runtime 'com.h2database:h2'
+    runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'mysql:mysql-connector-java'
+    runtimeOnly 'com.h2database:h2'
 
     // dependencies for test-execution
     testImplementation 'org.assertj:assertj-core:3.15.0'
