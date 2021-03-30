@@ -17,7 +17,7 @@ Sven Berding, sven.berding(at)haw-hamburg.de
 
 4. Klone Dein geforktes Projekt: 
     ```bash
-    git clone https://gitlab.informatik.haw-hamburg.de/<Dein-geforktes-Projekt>
+    git clone https://git.haw-hamburg.de/<Dein-geforktes-Projekt>
     ```
 
 5. Öffne ein Terminal.
