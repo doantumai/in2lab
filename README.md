@@ -8,7 +8,7 @@ Sven Berding, sven.berding(at)haw-hamburg.de
 ## A. Einrichtung des JDK und Ausführen der Tests
 
 1. Installiere lokal auf Deinem Rechner:
-    - Java OpenJDK (mindestens das JDK 8, und nicht die JRE!): https://openjdk.java.net. Unter Windows bedeutet dies u.a.: JAVA_HOME setzen und den Compiler in den PATH aufnehmen ([Anleitung hier](https://tecadmin.net/set-java-home-on-windows/)); bei Änderungen der Systemeinstellungen muss ein Terminal neu geöffnet werden, damit die Änderungen effektiv werden.
+    - Java OpenJDK (nicht die JRE! Mindestens das JDK 8, erfolgreich getestet auch mit JDK 13, das Projekt funktioniert *nicht* mit dem aktuellen JDK 16!): https://openjdk.java.net. Unter Windows bedeutet dies u.a.: JAVA_HOME setzen und den Compiler in den PATH aufnehmen ([Anleitung hier](https://tecadmin.net/set-java-home-on-windows/)); bei Änderungen der Systemeinstellungen muss ein Terminal neu geöffnet werden, damit die Änderungen effektiv werden.
     
     
 2. Forke dieses Projekt (nutze den `Fork`-Button oben rechts).
