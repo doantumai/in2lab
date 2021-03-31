@@ -8,7 +8,7 @@ Sven Berding, sven.berding(at)haw-hamburg.de
 ## A. Einrichtung des JDK und Ausführen der Tests
 
 1. Installiere lokal auf Deinem Rechner:
-    - Java OpenJDK (nicht die JRE! Mindestens das JDK 8, erfolgreich getestet auch mit JDK 13, das Projekt funktioniert *nicht* mit dem aktuellen JDK 16!): https://openjdk.java.net. Unter Windows bedeutet dies u.a.: JAVA_HOME setzen und den Compiler in den PATH aufnehmen ([Anleitung hier](https://tecadmin.net/set-java-home-on-windows/)); bei Änderungen der Systemeinstellungen muss ein Terminal neu geöffnet werden, damit die Änderungen effektiv werden.
+    - Java OpenJDK (nicht die JRE! Mindestens das **JDK 8**, erfolgreich getestet auch mit JDK 13, das Projekt funktioniert **nicht** mit dem aktuellen JDK 16!): https://openjdk.java.net. Unter Windows bedeutet dies u.a.: JAVA_HOME setzen und den Compiler in den PATH aufnehmen ([Anleitung hier](https://tecadmin.net/set-java-home-on-windows/)); bei Änderungen der Systemeinstellungen muss ein Terminal neu geöffnet werden, damit die Änderungen effektiv werden.
     
     
 2. Forke dieses Projekt (nutze den `Fork`-Button oben rechts).
@@ -38,7 +38,7 @@ Sven Berding, sven.berding(at)haw-hamburg.de
 
 ## B. Einrichtung einer IDE
 
-1. Installiere lokal auf Deinem Rechner (achte auf die korrekten Versionen!):
+1. Installiere lokal auf Deinem Rechner (achte auf die aktuellen Versionen!):
     - (empfohlen) Jetbrains IntelliJ IDEA Ultimate, aktuelle Version: https://www.jetbrains.com/idea/ (du kannst dies mit Deiner `haw-hamburg.de`-Adresse kostenlos nutzen)
         - Installiere das Lombok Plugin: https://projectlombok.org ([Anleitung hier](https://projectlombok.org/setup/intellij)).
     - (alternativ) Eclipse mit entsprechendem Lombok-Plugin
@@ -51,8 +51,10 @@ Sven Berding, sven.berding(at)haw-hamburg.de
 
 5. Aktiviere bei den Preferences unter `Build,Execution,Deployment->Compiler->Annotation Processors` das Annotation Processing (`Enable annotation processing`). Hierdurch erkennt IntelliJ die erzeugten Lombok-Artefakte korrekt und erzeugt keine Warnungen/Fehler mehr im Editor aufgrund (fälschlich) "fehlender" Getter/Setter.
 
-6. Öffne ein Terminal in IntelliJ (`View->Tool Windows->Terminal` im Menü).
+6. Setze bei den Preferences unter `Build,Execution,Deployment->Build Tools->Gradle` die Optionen `Build an run using` und `Run tests using` auf `Gradle`.
 
-7. führe die Tests wie unter A.7 beschrieben aus.
+7. Setze unter `File->Project Structure` das JDK (Option `Project Settings->Project`) auf deine JDK-Version (z.B. `1.8` für das JDK 8).
 
-8. Für das Ausführen der Tests musste Du im IntelliJ-Projekt u.U. noch weitere Änderungen vornehmen (Projekt-JDK, Startkonfiguration, ...)
+8. Öffne ein Terminal in IntelliJ (`View->Tool Windows->Terminal` im Menü). Führe die Tests wie unter A.7 beschrieben hier im Terminal aus.
+
+9. Du kannst auch die Tests durch die IDE ausführen lassen. Gehe dazu mit der rechten Maustaste auf Dein Projekt und wähle `Run Tests in in2lab`.
