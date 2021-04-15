@@ -21,29 +21,28 @@ import static org.junit.jupiter.api.Assertions.*;
 class ReservationRepositoryTest {
 
     @Autowired
+    private CustomerRepository customerRepository;
+
+    @Autowired
     private ReservationRepository reservationRepository;
+
     @Autowired
     private MovieRepository movieRepository;
 
     @BeforeEach
     void setUp(){
-        Reservation reservation1 = new Reservation(new Movie("Highschool Musical"));
-        Reservation reservation2 = new Reservation(new Movie("Highschool Musical 2"));
-        Reservation reservation3 = new Reservation(new Movie("Highschool Musical 3"));
+        customerRepository.deleteAll();
+        reservationRepository.deleteAll();
+        movieRepository.deleteAll();
 
+        Reservation reservation1 = new Reservation(new Movie("Highschool Musical"));
         reservationRepository.save(reservation1);
-        reservationRepository.save(reservation2);
-        reservationRepository.save(reservation3);
     }
 
     @Test
-    void getReservationSuccess(){
-       Optional<Movie> movie = movieRepository.findByTitle("Highschool Musical");
-       Optional<Movie> movie2 = movieRepository.findByTitle("Highschool Musical 2");
-       Optional<Movie> movie3 = movieRepository.findByTitle("Highschool Musical 3");
+    void getReservationSuccess() {
+        Optional<Movie> movie = movieRepository.findByTitle("Highschool Musical");
 
-       this.reservationRepository.findByMovie(movie).isPresent();
-       this.reservationRepository.findByMovie(movie2).isPresent();
-       this.reservationRepository.findByMovie(movie3).isPresent();
+        assertTrue(this.reservationRepository.findByMovie(movie).isPresent());
     }
 }

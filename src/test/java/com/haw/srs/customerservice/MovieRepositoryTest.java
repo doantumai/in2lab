@@ -16,11 +16,19 @@ import static org.junit.jupiter.api.Assertions.*;
 class MovieRepositoryTest {
 
     @Autowired
+    private CustomerRepository customerRepository;
+
+    @Autowired
+    private ReservationRepository reservationRepository;
+
+    @Autowired
     private MovieRepository movieRepository;
 
     @BeforeEach
     void setUp(){
-        //this.movieRepository.deleteAll(); movie steht mit reservations in einer Beziehung -> das Löschen vom movieRepository führt zu einem Error
+        customerRepository.deleteAll();
+        reservationRepository.deleteAll();
+        movieRepository.deleteAll();
 
         Movie movie1 = new Movie("Highschool Musical");
         Movie movie2 = new Movie("Highschool Musical 2");
