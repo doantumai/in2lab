@@ -5,7 +5,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-@Repository
+@Repository // DAO (Data Access Object Klasse: DAO stellt ein Pattern dar,
+            // dass auf einheitliche Weise den Zugriff auf Datenquellen kapselt)
 public interface CustomerRepository extends JpaRepository<Customer, Long>, CustomerRepositoryCustom {
 
     Optional<Customer> findByLastName(String lastName);

@@ -3,11 +3,9 @@ package com.haw.srs.customerservice;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -18,9 +16,15 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String movie;
+    private int sitNr;
 
-    public Reservation(String movie) {
+    private int hallNr;
+
+    @OneToOne(cascade=CascadeType.ALL) // einer Resevierung ist genau ein Movie zugeordnet
+    private Movie movie;
+
+    @Autowired
+    public Reservation(Movie movie) {
 
         this.movie = movie;
     }

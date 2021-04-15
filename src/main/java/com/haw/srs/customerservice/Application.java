@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
-@SpringBootApplication
+@SpringBootApplication // Hauptklasse der Anwendung
 public class Application {
 
     public static void main(String[] args) {
@@ -17,13 +17,13 @@ public class Application {
     }
 }
 
-@Component
-@Profile("testing")
+@Component //ist ein generischer Stereotyp für eine Bean, also Klassen die weder Service noch Repository sind.
+@Profile("testing") // einschalten/ausschalten beans
 class PopulateTestDataRunner implements CommandLineRunner {
 
     private final CustomerRepository customerRepository;
 
-    @Autowired
+    @Autowired // teilt Spring mit, wo es mittels Injection Objects in andere Klassen einfügen soll
     public PopulateTestDataRunner(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
@@ -37,7 +37,7 @@ class PopulateTestDataRunner implements CommandLineRunner {
                 );
 
         Customer customer = new Customer("Stefan", "Sarstedt", Gender.MALE, "stefan.sarstedt@haw-hamburg.de", new PhoneNumber("+49-40-123456"));
-        Reservation reservation = new Reservation("James Bond 007");
+        Reservation reservation = new Reservation(new Movie("James Bond 007"));
         customer.addReservation(reservation);
         customerRepository.save(customer);
     }

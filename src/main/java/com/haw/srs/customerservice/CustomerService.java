@@ -20,7 +20,7 @@ public class CustomerService {
         return customerRepository.findAll();
     }
 
-    @Transactional
+    @Transactional // dient zur Datenbanktransaktion
     public void transferReservations(String fromCustomer, String toCustomer) throws CustomerNotFoundException {
 
 // Alternativ zu unten:
@@ -38,7 +38,8 @@ public class CustomerService {
         to.getReservations().addAll(from.getReservations());
         from.getReservations().clear();
 
-        customerRepository.save(from);
+        customerRepository.save(from); // hier wirds in die Datenbank gespeichert...
+        //wenn es hier etwas schiefläuft und die Datenbank antwortet nicht, aber dadurch dass es eine Transaktion ist, wird die Daten zurückgesetzt
         customerRepository.save(to);
     }
 }
